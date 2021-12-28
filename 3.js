@@ -9,7 +9,7 @@ async function callBackendApi() {
   const parent = document.querySelector("#parent");
   for (let item of list) {
     const prevChilds = parent.innerHTML;
-    const newChild = `<p>${item.title}</p>`;
+    const newChild = `<p>${item.id} ${item.body}</p>`;
     parent.innerHTML = newChild + prevChilds;
   }
 }
