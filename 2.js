@@ -5,8 +5,5 @@ async function callBackendApi() {
   const res = await fetch(url);
   const list = await res.json();
 
-  for (let item of list) {
-    // console.log(item);
-    console.log(item.title);
-  }
+  console.log(list);
 }

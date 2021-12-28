@@ -4,13 +4,12 @@ async function callBackendApi() {
 
   const res = await fetch(url);
   const list = await res.json();
+  console.log(list);
 
   const parent = document.querySelector("#parent");
-
   for (let item of list) {
     const prevChilds = parent.innerHTML;
     const newChild = `<p>${item.title}</p>`;
-
     parent.innerHTML = newChild + prevChilds;
   }
 }
